@@ -1,0 +1,13 @@
+set nohelp
+set morespace
+set smooth
+set nowrap
+set smarthome
+set autoindent
+set const
+set tabsize 4
+set tabstospaces
+
+include /usr/share/nano/*.nanorc
+
+#include /home/saivert/.local/share/nano/*.nanorc

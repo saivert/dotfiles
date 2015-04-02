@@ -1,0 +1,6 @@
+#!/bin/sh
+amixer -c 1 sset 'Mic Boost (+20dB)' on
+amixer -c 1 sset 'Mic' 74%
+amixer -c 1 sset 'Master' 69%
+
+export TRACKER_USE_LOG_FILES=1

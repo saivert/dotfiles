@@ -1,0 +1,4 @@
+[general]
+close_last_tab = close
+[ui]
+default_size = 800x600

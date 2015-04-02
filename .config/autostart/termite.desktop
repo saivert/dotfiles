@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Termite
+Comment=Use the command line
+Exec=termite 
+Icon=termite-terminal-256.png
+Type=Application
+Categories=GTK;System;TerminalEmulator;
+StartupNotify=true

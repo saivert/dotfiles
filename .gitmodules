@@ -1,0 +1,8 @@
+[submodule ".config/sublime-text-3/Packages/GitGutter"]
+	path = .config/sublime-text-3/Packages/GitGutter
+	url = https://github.com/jisaacks/GitGutter.git
+	branch = master
+[submodule ".config/sublime-text-3/Packages/Open-Include"]
+	path = .config/sublime-text-3/Packages/Open-Include
+	url = git@github.com:SublimeText/Open-Include.git
+	branch = master

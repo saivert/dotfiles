@@ -30,6 +30,7 @@ xterm*metaSendsEscape: true
 xterm*saveLines: 8192
 xterm*termName: xterm-256color
 
+URxvt*termName: xterm-256color
 URxvt*geometry:	120x35
 URxvt*iso14755: False
 URxvt*scrollstyle: plain

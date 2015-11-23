@@ -1,0 +1,4 @@
+{
+	"cmd": ["valac", "--pkg=gtk+-3.0", "--pkg=clutter-1.0", "$file"],
+	"selector": "source.vala"
+}

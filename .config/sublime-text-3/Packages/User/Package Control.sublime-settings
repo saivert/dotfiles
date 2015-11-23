@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ANSIescape",
+		"GitGutter-Edge",
+		"Open-Include",
+		"Package Control",
+		"SublimeLinter",
+		"SublimeLinter-contrib-clang",
+		"SublimeLinter-cpplint",
+		"Theme - Spaceblack",
+		"Theme - Spacegray",
+		"Vala-TMBundle"
+	]
+}

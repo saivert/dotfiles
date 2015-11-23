@@ -1,5 +1,10 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Spaceblack-Monokai (SL).tmTheme",
 	"font_face": "Source Code Pro",
-	"font_size": 9
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Spaceblack.sublime-theme"
 }

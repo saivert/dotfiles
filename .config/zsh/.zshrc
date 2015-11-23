@@ -1,5 +1,13 @@
 # XDG_CONFIG_HOME/zsh/.zshrc
 
+parent=$(ps --no-header -o ppid -p $$ | cut -d\  -f 2 2>/dev/null)
+parentname=$(ps --no-header -o command -p $parent 2>/dev/null)
+
+if [[ "$parentname" == *"gnome-terminal"* ]];then
+gtk-launch termite $*
+exit
+fi
+
 # Modules.
 autoload -Uz edit-command-line run-help compinit zmv
 zmodload zsh/complist
@@ -51,8 +59,10 @@ else
         root="%F{cyan}"
 fi
 
-PROMPT='%F{white}[${root}%n%F{white}@%F{yellow}%m%F{white}]%F{green}${branch}%f[%F{red}%~%f%F{white}]%f%# '
+#current_btrfs_root=$(awk '{ if ($5 =="/") print $4}' /proc/self/mountinfo)
 
+#PROMPT='%F{white}[${root}%n%F{white}@%F{yellow}%m${current_btrfs_root}%F{white}]%F{green}${branch}%f[%F{red}%~%f%F{white}]%f%# '
+PROMPT='%F{white}[${root}%n%F{white}@%F{yellow}%m%F{white}]%F{green}${branch}%f[%F{red}%~%f%F{white}]%f%# '
 
 # Functions.
 # All I want is the git branch for now, vcs_info is way overkill to do this.

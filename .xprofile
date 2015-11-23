@@ -1,6 +1,15 @@
 #!/bin/sh
-amixer -c 1 sset 'Mic Boost (+20dB)' on
-amixer -c 1 sset 'Mic' 74%
-amixer -c 1 sset 'Master' 69%
+#amixer -c 1 sset 'Mic Boost (+20dB)' on
+#amixer -c 1 sset 'Mic' 74%
+#amixer -c 1 sset 'Master' 69%
 
-export TRACKER_USE_LOG_FILES=1
+gvfs-mount smb://server01/saivert
+
+
+# Disable Mono and Gecko installation and .desktop creation.
+export WINEDLLOVERRIDES=winemenubuilder.exe=d,mscoree,mshtml=d
+export WINEPREFIX=/home/saivert/.local/share/wineprefixes/default
+export WINEARCH=win32
+export WINEDEBUG=-all
+
+export SDL_AUDIODRIVER=pulse

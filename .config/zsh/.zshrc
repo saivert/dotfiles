@@ -238,8 +238,6 @@ if [[ -n $VTE_VERSION ]]; then
     __vte_prompt_command
 fi
 
-source /etc/profile.d/seahorse-ssh-askpass.sh
-
 function cls {
   clear
   date

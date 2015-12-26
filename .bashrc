@@ -1,12 +1,22 @@
+# Put on ice, when bash exits "gtk-launch termite" is also terminated. This doesn't happen with zsh
+#
+# parent=$(ps --no-header -o ppid -p $$ | cut -d\  -f 2 2>/dev/null)
+# parentname=$(ps --no-header -o command -p $parent 2>/dev/null)
+
+# if [[ "$parentname" == *"gnome-terminal"* ]];then
+# nohup termite $* &!
+# exit
+# fi
+
 source /etc/profile.d/vte.sh
-source /etc/profile.d/seahorse-ssh-askpass.sh
+
 
 if [ "$COLORTERM" == "gnome-terminal" ]
 then
     TERM=xterm-256color
-    elif [ "$COLORTERM" == "rxvt-xpm" ]
-    then
-        TERM=rxvt-256color
+elif [ "$COLORTERM" == "rxvt-xpm" ]
+then
+    TERM=rxvt-256color
 fi
 
 red="\[\e[0;31m\]"
@@ -29,7 +39,7 @@ PS1="${white}[${root}\u${white}@${yellow}\h${white}][${red}\w${white}]${white}% 
 alias ls="ls --color=auto"
 alias ll="ls -lA --color=auto"
 
-alias subl=subl3
+#alias subl=subl3
 
 alias df="df -h"
 alias route="echo IPv6 routes;ip -6 route;echo;echo IPv4 routes;ip -4 route"
@@ -51,5 +61,4 @@ cl() {
     fi
 }
 
-# Disable Mono and Gecko installation and .desktop creation
-export WINEDLLOVERRIDES="winemenubuilder.exe,mscoree,mshtml=d"
+shopt -s autocd

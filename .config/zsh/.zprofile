@@ -22,11 +22,4 @@ export TERMINAL=termite
 # use colour.
 source <(dircolors $XDG_CONFIG_HOME/terminal-colors.d/ls.enable)
 
-# Disable Mono and Gecko installation and .desktop creation.
-export WINEDLLOVERRIDES=winemenubuilder.exe=d,mscoree,mshtml=d
-export WINEPREFIX=$XDG_DATA_HOME/wineprefixes/default
-export WINEARCH=win32
-export WINEDEBUG=-all
-
 export SDL_AUDIODRIVER=pulse
-

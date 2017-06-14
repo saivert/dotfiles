@@ -4,8 +4,11 @@
 title="mpv: ${filename}"
 
 # Video
-vo=opengl-hq:scale=sinc:scale-radius=16
+
 hwdec=vdpau
+profile=opengl-hq
+vo-vdpau-hqscaling=5
+opengl-early-flush=no
 
 force-window
 
